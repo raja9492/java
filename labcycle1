@@ -1,0 +1,55 @@
+
+import java.util.Scanner;
+class empolyee
+{
+String name;
+int id,num, sal;
+void  getinfo()
+{
+Scanner sc1=new Scanner(System.in);
+name=sc1.next();
+id=sc1.nextInt();
+sal=sc1.nextInt();
+num=sc1.nextInt();
+}
+void addsal()
+{
+if(sal<500)
+{
+sal=sal+10;
+}
+System.out.println("salary is"+sal);
+}
+ void addwork()
+{
+if(num>6)
+{
+sal=sal+(30*5);
+}
+System.out.print("add work ");
+System.out.println("salary is:"+sal);
+}
+}
+
+class  Main
+{
+public static void main(String[] args)
+{
+int i,p=1;
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+empolyee a[]=new empolyee[n];    
+System.out.println("enter empolyee details:");
+for(i=0;i<n;i++)
+{
+System.out.println("enter empolyee"+p+"details");
+ a[i]=new empolyee();
+ a[i].getinfo();
+ a[i].addsal();
+ a[i].addwork(); 
+p=p+1;
+ }
+}
+}
+
+
